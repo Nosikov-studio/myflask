@@ -8,7 +8,7 @@ def index():
 
 
 @app.route('/about')
-def index():
+def about():
     return "We accept the fight"
 
 if __name__ =="__main__":
