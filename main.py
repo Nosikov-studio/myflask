@@ -16,7 +16,7 @@ def about():
 
 @app.route('/user/<string:name>/<int:id>')
 def user(name, id):
-    return "user page"+name + "-"+id
+    return "user page"+name + "-"+str(id)
 
 
 if __name__ == "__main__":
