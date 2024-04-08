@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import os
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def index():
-    return 'Helloooooooooooo+'
+    return render_template(index.html)
 
 
 @app.route('/about')
@@ -16,7 +16,7 @@ def about():
 
 @app.route('/user/<string:name>/<int:id>')
 def user(name, id):
-    return "user page"+name + "-"+str(id)
+    return "user page "+name + " - "+str(id)
 
 
 if __name__ == "__main__":
