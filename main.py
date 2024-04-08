@@ -11,7 +11,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return "We accept the fight"
+    return render_template("about.html")
 
 
 @app.route('/user/<string:name>/<int:id>')
