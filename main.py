@@ -14,5 +14,10 @@ def about():
     return "We accept the fight"
 
 
+@app.route('/user/<string:name>/<int:id>')
+def user(name, id):
+    return "user page"+name + "-"+id
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
