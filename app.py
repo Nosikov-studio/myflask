@@ -8,10 +8,10 @@ db=SQLAlchemy(app)
 
 class Article(db.Model):
     id=db.Column(db.Integer, primary_key=True)
-    id=db.Column(db.String(100), nullable=False)
-    id=db.Column(db.String(300), nullable=False)
-    id=db.Column(db.Text, nullable=False)
-    id=db.Column(db.Datetime, default=datetime.utcnow)
+    title=db.Column(db.String(100), nullable=False)
+    intro=db.Column(db.String(300), nullable=False)
+    text=db.Column(db.Text, nullable=False)
+    date=db.Column(db.Datetime, default=datetime.utcnow)
     def __repr__(self):
         return '<Article %r>' % self.id
 
