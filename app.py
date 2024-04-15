@@ -59,5 +59,15 @@ def create():
         return render_template("create.html")
 
 
+
+@app.route('/posts')
+def posts():
+    #articles=Article.query.first()
+    articles=Article.query.order_by(Article.date).all()
+    return render_template("posts.html",articles=articles)
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))
