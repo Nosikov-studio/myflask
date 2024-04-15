@@ -36,6 +36,12 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route('/posts')
+def posts():
+    #articles=Article.query.first()
+    articles=Article.query.order_by(Article.date).all()
+    return render_template("posts.html", articles=articles)
+
 
 @app.route('/user/<string:name>/<int:id>')
 def user(name, id):
@@ -60,11 +66,7 @@ def create():
 
 
 
-@app.route('/posts')
-def posts():
-    #articles=Article.query.first()
-    articles=Article.query.order_by(Article.date).all()
-    return render_template("posts.html",articles=articles)
+
 
 
 
