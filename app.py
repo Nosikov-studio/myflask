@@ -38,7 +38,7 @@ def about():
 
 @app.route('/posts')
 def posts():
-    #articles=Article.query.first()
+    articles=Article.query.first()
     articles=Article.query.all()
     return render_template("posts.html", articles=articles)
 
