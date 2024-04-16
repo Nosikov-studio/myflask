@@ -58,7 +58,7 @@ def create():
         try:
             db.session.add(article)
             db.session.commit()
-            return redirect('/')
+            return redirect('/posts')
         except:
             return "Errrrrrrrrr!!!"
     else: 
